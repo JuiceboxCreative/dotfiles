@@ -12,7 +12,7 @@ alias -- -="cd -"
 alias d="cd ~/Documents/Dropbox"
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
+alias s="cd ~/Sites"
 alias g="git"
 
 # Detect which `ls` flavor is in use
@@ -146,3 +146,25 @@ alias reload="exec ${SHELL} -l"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+# Useful Server shortcuts
+alias devbox='ssh juicebox@192.168.0.203 -p 60022'
+alias vps1='ssh mc1 -t su -l'
+alias vps2='ssh mc2 -t su -l'
+
+# Useful services
+alias restart-apache='sudo apachectl -k restart'
+alias restart-mysql='sudo brew services restart mariadb'
+alias start-apache='sudo apachectl start'
+alias start-dnsmasq='sudo brew services start dnsmasq'
+alias start-mysql='sudo brew services start mariadb'
+alias stop-apache='sudo apachectl stop'
+alias stop-dnsmasq='sudo brew services stop dnsmasq'
+alias stop-mysql='sudo brew services stop mariadb'
+alias startdev="~/dotfiles/startdev.sh"
+alias stopdev="~/dotfiles/stopdev.sh"
+
+# Everything else
+alias tail-apache='tail -f /usr/local/var/log/httpd/error_log'
+alias xon='xdebug on'
+alias xoff='xdebug off'
